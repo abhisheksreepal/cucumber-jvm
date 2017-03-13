@@ -546,7 +546,6 @@
     </pluginRepositories>
 
     <modules>
-        <!--<module>gosu</module>-->
         <module>core</module>
         <module>java</module>
         <module>testng</module>
