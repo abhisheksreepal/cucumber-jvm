@@ -1,4 +1,4 @@
-## [1.2.6-SNAPSHOT](https://github.com/cucumber/cucumber-jvm/compare/v1.2.5...master) (In Git)
+## [1.2.6](https://github.com/cucumber/cucumber-jvm/compare/v1.2.5...master) (In Git)
 
 ## [1.2.5](https://github.com/cucumber/cucumber-jvm/compare/v1.2.4...v1.2.5) (2016-09-12)
 

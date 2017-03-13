@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.abhishek.fork.info.cukes</groupId>
     <artifactId>cucumber-jvm</artifactId>
-    <version>1.2.6-SNAPSHOT</version>
+    <version>1.2.6</version>
     <packaging>pom</packaging>
     <name>Cucumber-JVM Fork to Continue Next Steps for Predefined Exceptions</name>
     <url>https://github.com/abhisheksreepal/cucumber-jvm</url>
@@ -551,20 +551,9 @@
         <module>java</module>
         <module>testng</module>
         <module>picocontainer</module>
-        <module>clojure</module>
         <module>junit</module>
-        <module>jruby</module>
-        <module>jython</module>
         <module>spring</module>
-        <module>osgi</module>
         <module>guice</module>
-        <module>weld</module>
-        <module>groovy</module>
-        <module>rhino</module>
-        <module>openejb</module>
-        <module>scala</module>
-        <module>needle</module>
-        <module>android</module>
     </modules>
 
     <profiles>
