@@ -41,15 +41,17 @@ Just load the root `pom.xml`
 
 To hack on Cucumber-JVM you need a JDK, Maven and Git to get the code. You also need to set your IDE/text editor to use:
 
-* UTF-8 file encoding
-* LF (UNIX) line endings
+* UTF-8 file encoding <sup>+</sup>
+* LF (UNIX) line endings <sup>+</sup>
 * No wildcard imports
 * Curly brace on same line as block
-* 4 Space indent (no tabs)
+* 4 Space indent (no tabs) <sup>+</sup>
   * Java
   * XML
-* 2 Space indent (no tabs)
+* 2 Space indent (no tabs) <sup>+</sup>
   * Gherkin
+
+`+` These are set automatically if you use an editor/IDE that supports [EditorConfig](http://editorconfig.org/#download).
 
 Please do *not* add @author tags - this project embraces collective code ownership. If you want to know who wrote some
 code, look in git. When you are done, send a [pull request](http://help.github.com/send-pull-requests/).
@@ -141,15 +143,6 @@ After that's done, commit and push `cucumber.github.com`
 Now, update the dependency in example projects:
 
 * https://github.com/cucumber/cucumber-java-skeleton
-
-## Code Coverage
-
-Code coverage is collected mainly to identify code that can be deleted or needs to be tested better.
-To generate a report, run:
-
-```
-COBERTURA_HOME=/some/where ./cobertura.sh
-```
 
 This technique to collect coverage for a multi-module Maven project is based on a
 [blog post](http://thomassundberg.wordpress.com/2012/02/18/test-coverage-in-a-multi-module-maven-project/) by Thomas Sundberg.
