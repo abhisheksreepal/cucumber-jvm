@@ -122,22 +122,22 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.github.abhishek.fork.info.cukes</groupId>
+                <groupId>info.cukes</groupId>
                 <artifactId>cucumber-spring</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.github.abhishek.fork.info.cukes</groupId>
+                <groupId>info.cukes</groupId>
                 <artifactId>cucumber-osgi</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.github.abhishek.fork.info.cukes</groupId>
+                <groupId>info.cukes</groupId>
                 <artifactId>cucumber-groovy</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.github.abhishek.fork.info.cukes</groupId>
+                <groupId>info.cukes</groupId>
                 <artifactId>cucumber-clojure</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -147,17 +147,17 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.github.abhishek.fork.info.cukes</groupId>
+                <groupId>info.cukes</groupId>
                 <artifactId>cucumber-testng</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.github.abhishek.fork.info.cukes</groupId>
+                <groupId>info.cukes</groupId>
                 <artifactId>cucumber-picocontainer</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.github.abhishek.fork.info.cukes</groupId>
+                <groupId>info.cukes</groupId>
                 <artifactId>cucumber-scala_2.11</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -177,12 +177,12 @@
                 <version>${picocontainer.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.github.abhishek.fork.info.cukes</groupId>
+                <groupId>info.cukes</groupId>
                 <artifactId>cucumber-android</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.github.abhishek.fork.info.cukes</groupId>
+                <groupId>info.cukes</groupId>
                 <artifactId>android-examples</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -548,11 +548,7 @@
     <modules>
         <module>core</module>
         <module>java</module>
-        <module>testng</module>
-        <module>picocontainer</module>
         <module>junit</module>
-        <module>spring</module>
-        <module>guice</module>
     </modules>
 
     <profiles>
@@ -567,82 +563,12 @@
         </profile>
 
         <profile>
-            <id>android-examples</id>
-            <modules>
-                <module>examples/android</module>
-            </modules>
-        </profile>
-
-        <profile>
             <id>junit-4.12</id>
             <properties>
                 <junit.version>4.12</junit.version>
             </properties>
         </profile>
 
-        <profile>
-            <id>examples</id>
-            <modules>
-                <module>examples/java-wicket</module>
-                <module>examples/spring-txn</module>
-                <module>examples/clojure_cukes</module>
-                <module>examples/java-calculator</module>
-                <module>examples/java-calculator-testng</module>
-                <module>examples/groovy-calculator</module>
-                <module>examples/scala-calculator</module>
-                <module>examples/java-webbit-websockets-selenium</module>
-                <module>examples/pax-exam</module>
-            </modules>
-        </profile>
-
-        <profile>
-            <id>release-sign-artifacts</id>
-            <modules>
-                <module>examples/java-wicket</module>
-                <module>examples/spring-txn</module>
-                <module>examples/clojure_cukes</module>
-                <module>examples/java-calculator</module>
-                <module>examples/java-calculator-testng</module>
-                <module>examples/groovy-calculator</module>
-                <module>examples/scala-calculator</module>
-                <module>examples/java-webbit-websockets-selenium</module>
-            </modules>
-            <activation>
-                <property>
-                    <name>performRelease</name>
-                    <value>true</value>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-release-plugin</artifactId>
-                        <configuration>
-                            <tagNameFormat>v@{project.version}</tagNameFormat>
-                        </configuration>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <configuration>
-                            <useAgent>true</useAgent>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-
-                </plugins>
-            </build>
-        </profile>
 
         <profile>
             <id>travis-disable-deploy-by-default</id>
